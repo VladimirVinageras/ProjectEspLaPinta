@@ -1,0 +1,39 @@
+
+{% extends 'appWebsite/base.html' %}
+
+{% load functions %}
+
+ 
+
+
+  {% block content %}
+  <div style="margin-top: 48px">
+      {{offersArticle.get_Text|safe}}
+  </div>
+  {% endblock %}  
+
+
+      
+ {% block articles %}  
+
+       <div class = "row" style="text-align: center;">
+    {% for article in allCourseArticles %}
+      
+              <div class="col-centered">
+              <div class="card" style="width: 19rem;">
+                <img class="card-img-top" src= "{{ article.get_PhotoURL }}"  alt="course 4 kids">
+                <div class="card-body">
+                 <p class="card-text"><a style="color:#000000" href="{% url 'courses_detail' pk=article.pk %}"> {{article.get_TextPreview|safe|striptags}}</a></p>
+                
+                
+              </div>
+              </div>
+              </div>
+        
+    {% endfor %}
+  </div>
+      
+ {% endblock %}
+
+
+

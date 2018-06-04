@@ -1,0 +1,87 @@
+body {
+    padding-left: 15px;
+}
+
+h1 a {
+    color: #FCA205;
+    font-family: 'Exo 2';
+}
+
+
+.top-header {
+    background-color: #1A237E;
+    color: #E8EAF6;
+    padding-top: 10;
+}
+
+.navbar{ 
+    background-color: #7986CB;
+    padding: 0;
+}
+
+.row{
+
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+.col-centered{
+
+    margin: 0 auto;
+    }
+
+.card-img-top{
+    max-height: 200px;
+  }
+
+.card{
+    margin-top: 16px;
+    margin-bottom: 16px;
+    }
+
+
+.media{
+    margin-top: 16px;
+    margin-bottom: 16px;
+    border-bottom: 2px solid #C5CAE9;     
+   }
+
+.opinion-photo{
+    max-width: 200px;
+    max-height: 200px;
+    margin-bottom: 8px;
+    }
+
+.courses-photo{
+    max-width: 250px;
+    max-height: 250px;
+    margin-bottom: 8px;   
+    margin-right: 32px;
+}
+
+address{
+    align-content: center;
+    text-align: justify;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+
+.col a{
+ color: #FFFFFF;
+}
+
+
+footer{
+padding-top: 30px;
+
+}
+
+
+body{
+    background: #E8EAF6;
+    padding-top: 10px;
+    color: #1A237E;
+}
+

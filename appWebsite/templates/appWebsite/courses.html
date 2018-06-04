@@ -1,0 +1,49 @@
+
+{% extends 'appWebsite/base.html' %}
+
+{% load functions %}
+  
+
+  {% block articles %}  
+
+  <div class = "row" style="text-align: left;">
+    {% for article in allCourseArticles %}
+      
+       
+    <div class="media">
+               <img class="courses-photo" src="{{ article.get_PhotoURL }}"  alt="course 4 kids">
+                <div class="media-body">
+                  <h5 class="mt-0"> <a style="color: #000000" href= "{% url 'courses_detail' pk=article.pk %}"> {{article.get_TextPreview|safe|striptags}}</a></h5>
+                    {{article.get_TextIntro|safe|striptags}}
+                </div>
+      </div>
+   
+    {% endfor %}
+  </div>
+      
+ {% endblock %}
+
+
+
+  {% block opinions %}  
+
+     <h1 style="text-align: center;"> Наши студенты </h1> 
+     <div style="border-top: 4px solid #C5CAE9;">
+      {% for article1 in allOpinionArticles %}
+      
+        <div class="media">
+             <img class="align-self-center mr-3 opinion-photo" src="{{ article1.get_PhotoURL }}" alt="Наши студенты.">
+          <div>
+            <h5>{{article1.get_Title}}</h5>
+            <p>{{article1.get_Text|safe|striptags}}</p>
+          </div>
+
+               
+              </div>
+        
+    {% endfor %}
+  </div>
+      
+ {% endblock %}
+
+
