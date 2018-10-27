@@ -1,0 +1,41 @@
+{% extends 'website/base.html' %}
+
+{% block title %} | Login Page {% endblock title %}
+
+{% block contents %}
+
+<!-- being-recaptcha -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script>
+	function onSubmit(token) {
+		document.getElementById("recaptcha-form").submit();
+	}
+</script>
+<style>
+	.grecaptcha-badge {
+		display: none;
+	}
+</style>
+<!-- end-recaptcha -->
+
+<div class="container">
+	<h2>Login</h2>
+	{% if form.errors %}
+	<p>Your username and password didn't match. Please try again.</p>
+	{% endif %}
+	<form id="recaptcha-form" method="post">
+		{% csrf_token %}
+		<p>
+			{{ form.username.label_tag }}
+			{{ form.username }}
+		</p>
+		<p>
+			{{ form.password.label_tag }}
+			{{ form.password }}
+		</p>
+		<input type="hidden" name="next" value="{{ next }}" />
+		<button class="g-recaptcha" data-sitekey="{{ recaptcha_site_key }}" data-callback='onSubmit'>Login</button>
+	</form>
+</div>
+
+{% endblock contents %}

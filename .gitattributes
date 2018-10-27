@@ -1,2 +1,47 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# Default all files it determins as text and normalize them
+* text=auto eol=lf
+
+# Git Files
+.gitattributes text eol=lf
+.gitignore text eol=lf
+.gitconfig text eol=lf
+
+# Web
+*.css     text eol=lf
+*.map     text eol=lf
+*.sass    text eol=lf
+*.json    text eol=lf
+*.js      text eol=lf
+*.htm     text eol=lf
+*.chm     binary
+*.html    text eol=lf
+*.cshtml  text eol=lf
+*.xml     text eol=lf
+*.svg     text eol=lf
+
+# Images & Media
+*.png     binary
+*.jpg     binary
+*.jpeg    binary
+*.gif     binary
+*.ico     binary
+*.mov     binary
+*.ico     binary
+*.pdf     binary
+
+# Compression
+*.gz      binary
+*.zip     binary
+*.7z      binary
+*.nupkg   binary
+
+# Fonts
+*.ttf     binary
+*.eot     binary
+*.woff    binary
+*.otf     binary
+
+# Config
+*.conf text eol=lf
+
+# 2018.10.24-DEA

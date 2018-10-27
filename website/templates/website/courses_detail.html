@@ -1,0 +1,67 @@
+
+{% extends 'website/base.html' %}
+
+{% load functions %}
+
+
+  {% block content %}
+  <div>
+      <div class="text-center" style="margin-top:16px;">
+          <img src="{{ article.get_PhotoURL }}" class="rounded" alt="">
+          <h1 style="text-align: center;">{{article.get_TextPreview|safe|striptags}}</h1>
+          <p>{{article1.get_Text|safe|striptags}}</p>
+      </div>
+
+
+      {{article.get_Text|safe}}
+
+
+    </div>
+  {% endblock %}  
+
+
+
+  {% block articles %}  
+
+       <div class = "row" style="text-align: center;">
+    {% for article2 in restCourseArticles %}
+      
+              <div class="col-centered">
+              <div class="card" style="width: 19rem;">
+                <img class="card-img-top" src= "{{ article2.get_PhotoURL }}"  alt="Качественые курсы испанского языка">
+                <div class="card-body">
+                <p class="card-text"><a style="color:#000000" href="{% url 'courses_detail' pk=article2.pk %}"> {{article2.get_TextPreview|safe|striptags}}</a></p>
+                
+                
+              </div>
+              </div>
+              </div>
+        
+    {% endfor %}
+  </div>
+      
+ {% endblock %}
+
+
+  {% block opinions %}  
+
+     <h1 style="text-align: center;"> Наши студенты </h1> 
+     <div style="border-top: 4px solid #C5CAE9;">
+      {% for article1 in allOpinionArticles %}
+      
+        <div class="media">
+             <img class="align-self-center mr-3 opinion-photo" src="{{ article1.get_PhotoURL }}" alt="Наши студенты.">
+          <div>
+            <h5>{{article1.get_Title}}</h5>
+            <p>{{article1.get_Text|safe|striptags}}</p>
+          </div>
+
+               
+              </div>
+        
+    {% endfor %}
+  </div>
+      
+ {% endblock %}
+
+
