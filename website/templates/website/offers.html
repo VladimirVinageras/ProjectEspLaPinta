@@ -23,7 +23,7 @@
               <div class="card" style="width: 19rem;">
                 <img class="card-img-top" src= "{{ article.get_PhotoURL }}"  alt="course 4 kids">
                 <div class="card-body">
-                 <p class="card-text"><a style="color:#000000" href="{% url 'courses_detail' pk=article.pk %}"> {{article.get_TextPreview|safe|striptags}}</a></p>
+                 <p class="card-text"><a style="color:#000000" href="{% url 'website:courses_detail' pk=article.pk %}"> {{article.get_TextPreview|safe|striptags}}</a></p>
                 
                 
               </div>

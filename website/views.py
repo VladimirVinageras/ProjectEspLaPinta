@@ -46,7 +46,6 @@ def courses_detail(request, pk):
 	allOpinionArticles = Article.objects.filter(category='Opinion')
 	toCourseArticles = Article.objects.filter(category='Course')
 	restCourseArticles = toCourseArticles.exclude(pk = pk)
-	
 	return render(request, 'website/courses_detail.html', {'article': article, 'navItems':navItems,'allOpinionArticles': allOpinionArticles, 'year': year, 'restCourseArticles': restCourseArticles})
 
 #def base_Menu_Nav(request):

@@ -13,7 +13,7 @@
     <div class="media">
                <img class="courses-photo" src="{{ article.get_PhotoURL }}"  alt="course 4 kids">
                 <div class="media-body">
-                  <h5 class="mt-0"> <a style="color: #000000" href= "{% url 'courses_detail' pk=article.pk %}"> {{article.get_TextPreview|safe|striptags}}</a></h5>
+                  <h5 class="mt-0"> <a style="color: #000000" href= "{% url 'website:courses_detail' pk=article.pk %}"> {{article.get_TextPreview|safe|striptags}}</a></h5>
                     {{article.get_TextIntro|safe|striptags}}
                 </div>
       </div>
