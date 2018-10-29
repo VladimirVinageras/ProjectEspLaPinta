@@ -107,12 +107,6 @@ body{
     color: #1A237E;
 }
 
-@media (max-width: 576px)
-.container {
-    max-width: 540px;
-    margin-right: auto;
-   margin-left: 0px ;
-}
 .container {
     margin-right: auto;
    margin-left: auto;
